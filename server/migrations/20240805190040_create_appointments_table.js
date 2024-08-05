@@ -13,7 +13,7 @@ exports.up = function (knex) {
       .inTable("customer")
       .onDelete("CASCADE");
     // table.integer("employee_id").unsigned().notNullable().references("employee_id").inTable("employee").onDelete("CASCADE");
-    // table.integer("service_id").unsigned().notNullable().references("service_id").inTable("service").onDelete("CASCADE");
+    table.integer("service_id").unsigned().notNullable().references("service_id").inTable("service").onDelete("CASCADE");
     table.timestamp("appointment_date").notNullable();
     table.string("status").notNullable();
     table.text("notes");
